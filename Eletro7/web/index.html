@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Cifrador RSA para BPag</title>
+</head>
+<body>
+	<h2>Cifrador RSA para BPag</h2>
+	<table>
+		<tr>
+			<td>O cifrador responde ao método POST na seguinte URL: <font
+				color="blue">http://catalogobrasilia.com.br/eletro7/bpag</font></td>
+		</tr>
+		<tr>
+			<td>Os seguintes paramentros devem ser informados pelo POST:<br>
+				<font color="red">cardN</font>=número do cartão, com 16 digitos
+				numéricos;<br> <font color="red">cardV</font>=código de
+				verificação, com 3 digitos numéricos;</td>
+		</tr>
+		<tr>
+			<td>
+			A servlet retorna um texto em ASCII contendo subsequentemente o número
+		de cartão e o código verificador, separados pelo caractere '<font
+						color="green">#</font>'.<br> Os valores são criptografados conforme
+		exemplo fornecido para o desenvolvimento.
+		</td>
+		</tr>
+	</table>
+	<p>Abaixo segue um formulário de exemplo para teste.
+	<form action="bpag" method="post">
+		Número do cartão: <input type="text" maxlength="16"  name="cardN"><br>
+		Código Verificador:<input type="text" maxlength="3"  name="cardV"> <input
+			type="submit" value="Encrypt">
+	</form>
+</body>
+</html>
